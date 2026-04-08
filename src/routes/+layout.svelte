@@ -1,11 +1,15 @@
 <script>
-	import favicon from '$lib/assets/favicon.svg';
+	import Breadcrumb from '$lib/atoms/Breadcrumb.svelte';
+	import NavBottom from '$lib/organisms/NavBottom.svelte';
 
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
+
+
+<header>
+	<Breadcrumb />
+	<NavBottom />
+</header>
 
 {@render children()}
