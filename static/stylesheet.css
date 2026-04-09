@@ -141,3 +141,7 @@ p {
   line-height: var(--p-s-line-height);
   max-width: var(--p-s-max-width);
 }
+
+a { 
+  font-family: var(--font-body);
+}
