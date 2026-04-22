@@ -96,6 +96,12 @@ li {
 }
 
 
+.menu-button.active:hover {
+  text-shadow: 0 0 10px #0D7CFF,
+               0 0 20px #0D7CFF,
+               0 0 30px #0D7CFF,
+               0 0 40px #0D7CFF;
+}
 
 details {
   position: relative;
