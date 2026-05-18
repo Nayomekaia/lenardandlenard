@@ -179,4 +179,13 @@
                 (err) => console.error(err),
             );
         });
+
+        // RENDER LOOP
+        function animate() {
+            requestAnimationFrame(animate);
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
 </script>
