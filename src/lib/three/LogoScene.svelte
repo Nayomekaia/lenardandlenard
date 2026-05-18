@@ -2,6 +2,11 @@
     /* base */
     import { onMount } from "svelte";
     import * as THREE from "three";
+
+    /* loaders for object */
+    import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+    import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
+
     let container;
 
     onMount(() => {
@@ -71,4 +76,13 @@
         // canvas should not block clicks/scrolling
         renderer.domElement.style.pointerEvents = "none";
 
+        // DRACO
+        const dracoLoader = new DRACOLoader();
+
+        dracoLoader.setDecoderPath(
+            "https://www.gstatic.com/draco/v1/decoders/",
+        );
+
+        const loader = new GLTFLoader();
+        loader.setDRACOLoader(dracoLoader);
 </script>
