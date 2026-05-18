@@ -85,4 +85,30 @@
 
         const loader = new GLTFLoader();
         loader.setDRACOLoader(dracoLoader);
+
+        // LOGO GROUP
+        const logoGroup = new THREE.Group();
+        scene.add(logoGroup);
+
+        // global size
+        const GLOBAL_SCALE = 1;
+
+        // all letters
+        const LETTERS = [
+            { id: "L", file: "L.glb", x: -12 },
+            { id: "E", file: "E.glb", x: -10 },
+            { id: "N", file: "N.glb", x: -8 },
+            { id: "A", file: "A.glb", x: -6 },
+            { id: "R", file: "R.glb", x: -4 },
+            { id: "D", file: "D.glb", x: -2 },
+
+            { id: "1", file: "separator.glb", x: 0 },
+
+            { id: "D", file: "D1.glb", x: 2 },
+            { id: "2", file: "R1.glb", x: 4 },
+            { id: "A", file: "A1.glb", x: 6 },
+            { id: "N", file: "N1.glb", x: 8 },
+            { id: "E", file: "E1.glb", x: 10 },
+            { id: "L", file: "L1.glb", x: 12 },
+        ];
 </script>
