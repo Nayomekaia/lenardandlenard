@@ -5,3 +5,16 @@
 </script>
 
 <LogoScene />
+
+<section class="content">
+    <h1>My Website</h1>
+</section>
+
+<style>
+    .content {
+        position: relative;
+        z-index: 10;
+        color: white;
+    }
+
+</style>
