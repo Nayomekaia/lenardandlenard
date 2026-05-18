@@ -38,4 +38,20 @@
             0.1,
             1000,
         );
+
+        // RESPONSIVE CAMERA
+        const updateCamera = () => {
+            if (window.innerWidth <= 480) {
+                camera.position.z = 60;
+            } else if (window.innerWidth <= 768) {
+                camera.position.z = 50;
+            } else if (window.innerWidth <= 1024) {
+                camera.position.z = 45;
+            } else {
+                camera.position.z = 20;
+            }
+        };
+
+        updateCamera();
+
 </script>
