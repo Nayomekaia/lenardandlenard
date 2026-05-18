@@ -111,4 +111,57 @@
             { id: "E", file: "E1.glb", x: 10 },
             { id: "L", file: "L1.glb", x: 12 },
         ];
+
+        // LOAD MODELS
+        LETTERS.forEach((letterData) => {
+            loader.load(
+                `/models/${letterData.file}`,
+
+                (gltf) => {
+                    const letter = gltf.scene;
+
+                    // center model
+                    const box = new THREE.Box3().setFromObject(letter);
+
+                    const center = new THREE.Vector3();
+                    box.getCenter(center);
+
+                    letter.position.sub(center);
+
+                    // calculate size
+                    const extraScale =
+                        LETTER_SCALE_MAP[letterData.id] ||
+                        letterData.scale ||
+                        1;
+
+                    const size = new THREE.Vector3();
+                    box.getSize(size);
+
+                    const maxDim = Math.max(size.x, size.y, size.z);
+
+                    const scale = (1.5 / maxDim) * GLOBAL_SCALE * extraScale;
+
+                    letter.scale.setScalar(scale);
+
+                    // set position
+                    letter.position.x += letterData.x;
+
+                    // apply material
+                    letter.traverse((child) => {
+                        if (child.isMesh) {
+                            child.material = logoMaterial;
+                        }
+                    });
+
+                    // add to scene
+                    logoGroup.add(letter);
+
+                    console.log("Loaded:", letterData.id);
+                },
+
+                undefined,
+
+                (err) => console.error(err),
+            );
+        });
 </script>
