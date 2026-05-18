@@ -201,4 +201,20 @@
         };
 
         window.addEventListener("resize", handleResize);
+
+        // CLEANUP
+        return () => {
+            window.removeEventListener("resize", handleResize);
+
+            logoGroup.traverse((child) => {
+                if (child.isMesh) {
+                    child.geometry.dispose();
+                }
+            });
+
+            logoMaterial.dispose();
+
+            renderer.dispose();
+        };
+    });
 </script>
