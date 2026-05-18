@@ -54,4 +54,21 @@
 
         updateCamera();
 
+        // RENDERER
+        const renderer = new THREE.WebGLRenderer({
+            antialias: true,
+            alpha: true,
+        });
+
+        renderer.shadowMap.enabled = false;
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        container.appendChild(renderer.domElement);
+
+        // canvas should not block clicks/scrolling
+        renderer.domElement.style.pointerEvents = "none";
+
 </script>
