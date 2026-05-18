@@ -99,6 +99,15 @@
             1: 1.5,
             2: 1.1,
         };
+
+        // metallic material
+        const logoMaterial = new THREE.MeshStandardMaterial({
+            metalness: 1,
+            roughness: 0.25,
+            envMapIntensity: 1.8,
+            color: new THREE.Color("#ffffff"),
+        });
+
         // all letters
         const LETTERS = [
             { id: "L", file: "L.glb", x: -12 },
