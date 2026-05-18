@@ -218,3 +218,6 @@
         };
     });
 </script>
+
+<div bind:this={container} class="three-container"></div>
+
