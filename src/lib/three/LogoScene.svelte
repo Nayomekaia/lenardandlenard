@@ -30,4 +30,12 @@
         const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
         directionalLight.position.set(5, 5, 5);
         scene.add(directionalLight);
+
+        // CAMERA
+        const camera = new THREE.PerspectiveCamera(
+            60,
+            window.innerWidth / window.innerHeight,
+            0.1,
+            1000,
+        );
 </script>
