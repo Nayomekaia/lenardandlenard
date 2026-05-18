@@ -221,3 +221,11 @@
 
 <div bind:this={container} class="three-container"></div>
 
+<style>
+    .three-container {
+        position: relative;
+        inset: 0;
+        overflow: hidden;
+        z-index: 0;
+    }
+</style>
