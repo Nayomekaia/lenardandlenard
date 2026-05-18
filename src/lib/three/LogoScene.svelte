@@ -93,6 +93,12 @@
         // global size
         const GLOBAL_SCALE = 1;
 
+        // specific letter sizes
+        const LETTER_SCALE_MAP = {
+            A: 1.19,
+            1: 1.5,
+            2: 1.1,
+        };
         // all letters
         const LETTERS = [
             { id: "L", file: "L.glb", x: -12 },
