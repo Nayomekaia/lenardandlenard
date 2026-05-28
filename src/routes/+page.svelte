@@ -17,4 +17,19 @@
         color: white;
     }
 
+    :global(body) {
+
+        background: linear-gradient(
+            180deg,
+            #080303 0%,
+            #1e1e1e 7%,
+            #B49A86 27%,
+            #bcbee0 49%,
+            #4e5076 73%,
+            #191b3f 87%,
+            #000000 100%
+        ); 
+        background-repeat: no-repeat;
+    }
 </style>
+
