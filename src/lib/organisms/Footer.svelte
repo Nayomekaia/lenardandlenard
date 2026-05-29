@@ -297,6 +297,56 @@
         }
     }
 
+    /* DESKTOP */
+
+    @media (min-width: 1024px) {
+        footer {
+            padding: 6rem;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 5rem;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .intro,
+        .contact,
+        menu {
+            flex: 1;
+        }
+
+        .intro {
+            max-width: 420px;
+        }
+
+        menu {
+            max-width: 200px;
+        }
+
+        .contact {
+            max-width: 320px;
+        }
+
+        .contact p {
+            max-width: 300px;
+        }
+
+        .socials {
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .credits {
+            font-size: 15px;
+        }
+
+        .logo {
+            width:250px;
         }
     }
 </style>
