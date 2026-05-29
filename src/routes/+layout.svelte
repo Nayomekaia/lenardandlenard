@@ -1,20 +1,25 @@
 <script>
-	import Breadcrumb from '$lib/atoms/Breadcrumb.svelte';
-	import NavBottom from '$lib/organisms/NavBottom.svelte';
+	import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
+	import NavBottom from "$lib/organisms/NavBottom.svelte";
+	import NavTop from "$lib/organisms/NavTop.svelte";
+	import Footer from "$lib/organisms/Footer.svelte";
 
 	let { children } = $props();
 </script>
 
-
-
 <header>
-	<Breadcrumb />
+ 	<NavTop />
 	<NavBottom />
+	<Breadcrumb />
 </header>
 
 <main>
 {@render children()}
 </main>
+
+<footer>
+  <Footer />
+ <footer/>
 
 <style>
 
@@ -24,12 +29,4 @@
   box-sizing: border-box;
 }
 
-:global(body) {
-        display: flex;
-        flex-direction: column;
-    }
-
-    main {
-        flex: 1;
-    }
 </style>
