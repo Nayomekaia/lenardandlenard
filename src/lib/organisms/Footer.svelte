@@ -131,6 +131,135 @@
     <a href="here comes a link" class="credits">@Made by CRE8 STUDIOS</a>
 </footer>
 
+<style>
+    /* MOBILE */
+
+    footer {
+        padding: 2rem 1.25rem;
+    }
+
+    li,
+    p,
+    a,
+    h4,
+    summary,
+    details {
+        font-family: var(--font-body);
+        color: var(--primary-white);
+    }
+
+    p,
+    h4,
+    ul,
+    menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        margin-top: 1.5rem;
+        max-width: 100%;
+        line-height: 1.5;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .intro,
+    .contact,
+    menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .contact p {
+        max-width: 100%;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+        gap: 1.25rem;
+        list-style: none;
+    }
+
+    .credits {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 2rem;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    menu {
+        list-style: none;
+        gap: 1.5rem;
+    }
+
+    menu ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    menu details {
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    menu details li {
+        margin-top: 0.4rem;
+    }
+
+    menu details li::before {
+        content: ">";
+        margin-right: 0.5rem;
+    }
+
+    menu a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    menu summary {
+        list-style: none;
+        cursor: pointer;
+    }
+
+    menu summary::-webkit-details-marker {
+        display: none;
+    }
+
+    menu li {
+        list-style: none;
+        transition: transform 0.2s ease;
+    }
+    menu li:hover {
+        transform: translateX(6px);
+    }
+
+    .menu-button.active {
+        text-decoration: underline;
+    }
+
+    .logo {
+            width:180px;
+        }
+
         }
     }
 </style>
