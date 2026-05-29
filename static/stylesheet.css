@@ -54,30 +54,31 @@
 
 
   /*PRIMARY COLORS */
- --primary-brown: hsl( 26%, 30%, 51%);
- --primary-blue:  hsl( 237%, 20%, 38%);
- --primary-black:  hsl( 0%, 45%, 2%);
+ --primary-brown: hsl( 26, 30%, 51%);
+ --primary-blue:  hsl( 237, 20%, 38%);
+ --primary-black:  hsl( 0, 45%, 2%);
+ --primary-white: hsl( 0, 0%, 100%);
 
 
   /*ACCENT COLORS*/
 
   /* darker */
-  --blue-500:  hsl( 237%, 43%, 17%);
-  --brown-500: hsl( 26%, 58%, 27%);
-  --black-500: hsl( 0%, 0%, 0%);
+  --blue-500:  hsl( 237, 43%, 17%);
+  --brown-500: hsl( 26, 58%, 27%);
+  --black-500: hsl( 0, 0%, 0%);
  
   /* lighter */
-  --blue-300: hsl( 237%, 8%, 56%);
-  --brown-300: hsl( 26%, 24%, 62%);
-  --black-300: hsl( 0%, 0%, 56%);
+  --blue-300: hsl( 237, 8%, 56%);
+  --brown-300: hsl( 26, 24%, 62%);
+  --black-300: hsl( 0, 0%, 56%);
 
-  --blue-200:hsl( 237%, 7%, 66%);
-  --brown-200: hsl( 31%, 36%, 76%);
-  --black-200: hsl( 0%, 0%, 85%);
+  --blue-200:hsl( 237, 7%, 66%);
+  --brown-200: hsl( 31, 36%, 76%);
+  --black-200: hsl( 0, 0%, 85%);
 
-  --blue-100: hsl( 237%, 37%,81%);
-  --brown-100: hsl( 30%, 55%, 61%);
-  --black-100: hsl( 0%, 0%, 99%);
+  --blue-100: hsl(238, 36%, 81%);
+  --brown-100: hsl( 30, 55%, 61%);
+  --black-100: hsl( 0, 0%, 99%);
 
 
 /* =========================
@@ -181,4 +182,9 @@ a {
     0px 6px 16px 0px color-mix(in srgb, black calc(var(--glass-dark) * 8%), transparent);
 
   transition: all 0.4s cubic-bezier(1, 0, 0.4, 1);
+}
+
+.logo {
+  width: 190px;
+  height: 26px;
 }
