@@ -1,14 +1,18 @@
 <script>
 	import Breadcrumb from "$lib/atoms/Breadcrumb.svelte";
 	import NavBottom from "$lib/organisms/NavBottom.svelte";
+	import NavTop from "$lib/organisms/NavTop.svelte";
+	import Footer from "$lib/organisms/Footer.svelte";
 
 	let { children } = $props();
 </script>
 
 <header>
+ 	<NavTop />
 	<NavBottom />
 	<Breadcrumb />
 </header>
+
 
 <main>
 {@render children()}
