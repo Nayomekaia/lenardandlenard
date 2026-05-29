@@ -260,6 +260,43 @@
             width:180px;
         }
 
+    /* TABLET */
+
+    @media (min-width: 768px) {
+        footer {
+            padding: 4rem 3rem;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact {
+            grid-column: span 2;
+        }
+
+        p {
+            max-width: 400px;
+        }
+
+        .contact p {
+            max-width: 300px;
+        }
+
+        .credits {
+            justify-content: flex-end;
+            margin-right: 1rem;
+        }
+
+        .logo {
+            width:200px;
+        }
+    }
+
         }
     }
 </style>
