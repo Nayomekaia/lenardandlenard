@@ -13,13 +13,13 @@
 	<Breadcrumb />
 </header>
 
-
 <main>
 {@render children()}
 </main>
 
 <footer>
-</footer>
+  <Footer />
+ <footer/>
 
 <style>
 
@@ -28,10 +28,5 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-:global(body)  {
-		background-color: black;
-	}
-
 
 </style>
