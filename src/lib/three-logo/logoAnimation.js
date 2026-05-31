@@ -162,3 +162,54 @@ export function applyAnimationPhases(letters, phases) {
         }
     });
 }
+
+function getPhase2State(role, t = 1) {
+    const swirl = t * Math.PI * 2.6;
+
+    const offsets = {
+        leftL: 0,
+        center: Math.PI * 0.7,
+        rightL: Math.PI * 1.4,
+    };
+
+    const angle = swirl + offsets[role.key];
+
+    const radiusX = lerp(5.2, 2.2, t);
+    const radiusY = lerp(3.4, 1.4, t);
+    const depth = lerp(5.5, 2.2, t);
+
+    const centerY = lerp(-0.2, 2.75, t);
+
+    return {
+        x: Math.cos(angle) * radiusX,
+        y: centerY + Math.sin(angle * 1.1) * radiusY,
+        z: Math.sin(angle) * depth,
+        rotX: Math.sin(angle) * 1.1,
+        rotY: Math.cos(angle) * 1.3,
+        rotZ: angle * 0.55,
+        depth,
+    };
+}
+
+function applyPhase1(item, t) {
+    const { mesh, originalX, compactX, role } = item;
+
+    mesh.position.x = lerp(originalX, compactX, t);
+
+    if (!role.isTopLetter && !role.isCenter) {
+        const speed = Math.abs(originalX) / 12;
+        setOpacity(item, Math.max(0, 1 - t / speed));
+    }
+}
+
+function applyPhase2(item, t) {
+    if (!item.role.isActive) return;
+
+    const { mesh, compactX } = item;
+    const state = getPhase2State(item.role, t);
+
+    mesh.position.x = lerp(compactX, state.x, t);
+    mesh.position.y = lerp(0, state.y, t);
+    mesh.position.z = lerp(0, state.z, t);
+
+    applySeparatorZ(item);
