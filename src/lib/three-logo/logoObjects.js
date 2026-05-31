@@ -80,3 +80,16 @@ export function setDepthMode(item, renderOrder, depthTest, depthWrite) {
     });
 }
 
+export function resetTransform(item) {
+    item.mesh.position.set(item.mesh.position.x, 0, 0);
+    item.mesh.rotation.set(0, 0, 0);
+
+    applyScale(item);
+}
+
+export function applySeparatorZ(item) {
+    if (item.role.isSeparator) {
+        item.mesh.position.z += SEPARATOR_Z_OFFSET;
+    }
+}
+
