@@ -204,3 +204,32 @@ export const PHASE_6_FINAL_LAYOUT = {
     },
 };
 
+export const PHASE_5_MOTION = {
+    leftL: {
+        zLift: 0.7,
+        arcX: -0.45,
+        arcY: 0.28,
+        settleY: 1,
+        rotY: 0.25,
+        rotZ: -0.18,
+    },
+
+    center: {
+        zLift: 0.5,
+        arcX: 0.2,
+        arcY: 0,
+        settleY: 0.4,
+        rotY: -0.18,
+        rotZ: 0,
+    },
+
+    rightL: {
+        zLift: 0.7,
+        arcX: 0.45,
+        arcY: 0.28,
+        settleY: 1,
+        rotY: -0.25,
+        rotZ: 0.18,
+    },
+};
+
