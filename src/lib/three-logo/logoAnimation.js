@@ -248,3 +248,17 @@ function applyPhase2(item, t) {
     applyScale(item);
 }
 
+function applyPhase4(item, t) {
+    if (!item.role.isActive) return;
+
+    const start = PHASE_3_LAYOUT[item.role.key].top;
+    const end = PHASE_4_END_LAYOUT[item.role.key];
+
+    const state = lerpState(start, end, t);
+    state.y += Math.sin(t * Math.PI) * 0.7;
+
+    applyState(item.mesh, state);
+    applySeparatorZ(item);
+    applyScale(item);
+}
+
