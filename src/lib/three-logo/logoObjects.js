@@ -93,3 +93,12 @@ export function applySeparatorZ(item) {
     }
 }
 
+export function disposeMaterial(material) {
+    if (Array.isArray(material)) {
+        material.forEach((item) => item.dispose());
+        return;
+    }
+
+    material?.dispose();
+}
+
