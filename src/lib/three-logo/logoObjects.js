@@ -124,3 +124,10 @@ function normalizeModelOrigin(mesh) {
     mesh.position.sub(center);
 }
 
+function getCompactX(originalX) {
+    if (originalX < 0) return -2;
+    if (originalX > 0) return 2;
+
+    return 0;
+}
+
