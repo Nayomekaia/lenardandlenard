@@ -17,3 +17,7 @@ export function createLogoLights(scene) {
         phaseColorGlowLight: new THREE.PointLight("#B49A86", 0.2, 60),
     };
 
+    const baseLights = [
+        new THREE.AmbientLight("#B49A86", 0.62),
+        new THREE.HemisphereLight(0xe8eef7, 0x927c6f, 0.82),
+
