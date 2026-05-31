@@ -117,3 +117,32 @@ export const PHASE_3_LAYOUT = {
     },
 };
 
+export const PHASE_4_END_LAYOUT = {
+    leftL: {
+        x: 5,
+        y: 3,
+        z: 0,
+        rotX: 0,
+        rotY: 0,
+        rotZ: Math.PI / -2,
+    },
+
+    center: {
+        x: -5,
+        y: 0,
+        z: 0,
+        rotX: 0,
+        rotY: 0,
+        rotZ: Math.PI / 2,
+    },
+
+    rightL: {
+        x: 5,
+        y: -3,
+        z: 0,
+        rotX: 0,
+        rotY: 0,
+        rotZ: -Math.PI / 2,
+    },
+};
+
