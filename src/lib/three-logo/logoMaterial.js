@@ -6,3 +6,6 @@ export function createLogoMaterial() {
 
     const logoMaterial = new THREE.MeshPhysicalMaterial({
         color: new THREE.Color("#bcbee0"),
+
+        metalness: 0.88,
+        roughness: 0.45,
