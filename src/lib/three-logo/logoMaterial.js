@@ -13,3 +13,6 @@ export function createLogoMaterial() {
         clearcoat: 1,
         clearcoatRoughness: 0.3,
 
+        envMap: reflectionTexture,
+        envMapIntensity: 1.25,
+
