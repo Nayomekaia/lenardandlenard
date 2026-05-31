@@ -116,3 +116,11 @@ export function disposeMaterial(material) {
     material?.dispose();
 }
 
+function normalizeModelOrigin(mesh) {
+    const box = new THREE.Box3().setFromObject(mesh);
+    const center = new THREE.Vector3();
+
+    box.getCenter(center);
+    mesh.position.sub(center);
+}
+
