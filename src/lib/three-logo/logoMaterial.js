@@ -16,3 +16,8 @@ export function createLogoMaterial() {
         envMap: reflectionTexture,
         envMapIntensity: 1.25,
 
+        bumpMap: grainTexture,
+        bumpScale: 0.04,
+
+        roughnessMap: grainTexture,
+
