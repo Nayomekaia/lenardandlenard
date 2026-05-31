@@ -54,3 +54,19 @@ export function createLetterItem(mesh, data, baseMaterial) {
     return item;
 }
 
+export function applyScale(item, multiplier = 1) {
+    const { mesh, baseScale, thickness } = item;
+
+    mesh.scale.set(
+        baseScale * multiplier * thickness.x,
+        baseScale * multiplier * thickness.y,
+        baseScale * multiplier * thickness.z,
+    );
+}
+
+export function setOpacity(item, opacity) {
+    item.childMeshes.forEach((child) => {
+        child.material.opacity = opacity;
+    });
+}
+
