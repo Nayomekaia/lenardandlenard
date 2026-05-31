@@ -17,11 +17,13 @@
 {@render children()}
 </main>
 
-<footer>
+
   <Footer />
- <footer/>
+
 
 <style>
+
+
 
 :global(*) {
   margin: 0;
