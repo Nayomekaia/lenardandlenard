@@ -65,3 +65,9 @@ export function updatePhaseLights(lights, scrollProgress) {
     lights.phaseColorGlowLight.intensity = 0.2;
 }
 
+function createDirectionalLight(color, intensity, position) {
+    const light = new THREE.DirectionalLight(color, intensity);
+    light.position.set(...position);
+
+    return light;
+}
