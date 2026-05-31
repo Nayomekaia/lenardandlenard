@@ -84,3 +84,8 @@ function getGradientPhaseColor(progress) {
     const currentColor = new THREE.Color();
     const nextColor = new THREE.Color();
 
+    for (let i = 0; i < BACKGROUND_PHASE_COLORS.length - 1; i++) {
+        const current = BACKGROUND_PHASE_COLORS[i];
+        const next = BACKGROUND_PHASE_COLORS[i + 1];
+
+        if (p >= current.stop && p <= next.stop) {
