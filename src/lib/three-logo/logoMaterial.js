@@ -9,3 +9,7 @@ export function createLogoMaterial() {
 
         metalness: 0.88,
         roughness: 0.45,
+
+        clearcoat: 1,
+        clearcoatRoughness: 0.3,
+
