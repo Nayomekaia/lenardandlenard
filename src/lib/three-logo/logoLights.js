@@ -79,3 +79,8 @@ function createPointLight(color, intensity, distance, position) {
     return light;
 }
 
+function getGradientPhaseColor(progress) {
+    const p = clamp(progress, 0, 1);
+    const currentColor = new THREE.Color();
+    const nextColor = new THREE.Color();
+
