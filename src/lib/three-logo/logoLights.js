@@ -28,3 +28,6 @@ export function createLogoLights(scene) {
         createDirectionalLight("#B49A86", 0.42, [-5, -3, 7]),
         createDirectionalLight("#bcbee0", 0.42, [5, -3, 7]),
 
+        createPointLight("#B49A86", 0.9, 90, [0, 0.5, 10]),
+        createPointLight("#e0d2c9", 0.7, 110, [0, -4, 9]),
+
