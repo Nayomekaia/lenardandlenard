@@ -26,3 +26,16 @@ export function createLetterItem(mesh, data, baseMaterial) {
         z: 1,
     };
 
+    const childMeshes = [];
+
+    mesh.traverse((child) => {
+        if (!child.isMesh) return;
+
+        child.material = baseMaterial.clone();
+        child.material.transparent = true;
+        child.material.depthWrite = true;
+        child.material.depthTest = true;
+
+        childMeshes.push(child);
+    });
+
