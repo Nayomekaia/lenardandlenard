@@ -213,3 +213,38 @@ function applyPhase2(item, t) {
     mesh.position.z = lerp(0, state.z, t);
 
     applySeparatorZ(item);
+    const fallDuration = 0.28;
+    const fallPower = 3.4;
+    const bounceStrength = 0.14;
+
+    const fallT = clamp(t / fallDuration, 0, 1);
+    const gravity = Math.pow(fallT, fallPower);
+
+    const bounceT = clamp((fallT - 0.72) / 0.28, 0, 1);
+
+    const bounce =
+        Math.sin(bounceT * Math.PI * 2.2) *
+        bounceStrength *
+        (1 - bounceT);
+
+    const scrollAwayT = clamp(
+        (t - fallDuration) / (1 - fallDuration),
+        0,
+        1,
+    );
+
+    const scrollAwayEase = easeOutCubic(scrollAwayT);
+
+    const phase2End = getPhase2State(item.role, 1);
+    const { land, top } = PHASE_3_LAYOUT[item.role.key];
+
+    const fallenState = lerpState(phase2End, land, gravity);
+    fallenState.y += bounce;
+
+    const state = lerpState(fallenState, top, scrollAwayEase);
+
+    applyState(item.mesh, state);
+    applySeparatorZ(item);
+    applyScale(item);
+}
+
