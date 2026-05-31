@@ -21,3 +21,6 @@ export function createLogoMaterial() {
 
         roughnessMap: grainTexture,
 
+        emissive: new THREE.Color("#B49A86"),
+        emissiveIntensity: 0.05,
+
