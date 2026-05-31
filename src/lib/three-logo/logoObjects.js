@@ -131,3 +131,26 @@ function getCompactX(originalX) {
     return 0;
 }
 
+function getRole(originalX) {
+    const isLeftL = originalX === -12;
+    const isRightL = originalX === 12;
+    const isCenter = originalX === 0;
+
+    const key = isLeftL
+        ? "leftL"
+        : isCenter
+          ? "center"
+          : isRightL
+            ? "rightL"
+            : null;
+
+    return {
+        key,
+        isLeftL,
+        isRightL,
+        isCenter,
+        isSeparator: isCenter,
+        isTopLetter: isLeftL || isRightL,
+        isActive: isLeftL || isRightL || isCenter,
+    };
+}
