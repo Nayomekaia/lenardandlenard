@@ -299,3 +299,28 @@ function applyPhase5(item, t) {
     applyScale(item, lerp(1, 1.35, t));
 }
 
+function applyPhase6(item, t) {
+    if (!item.role.isActive) return;
+
+    const state = lerpState(
+        PHASE_5_FINAL_LAYOUT[item.role.key],
+        PHASE_6_FINAL_LAYOUT[item.role.key],
+        t,
+    );
+
+    if (item.role.isSeparator) {
+        state.z += SEPARATOR_Z_OFFSET;
+    }
+
+    setDepthMode(
+        item,
+        item.role.isSeparator
+            ? RENDER_ORDER.separator
+            : RENDER_ORDER.activeTop,
+        false,
+        false,
+    );
+
+    applyState(item.mesh, state);
+    applyScale(item, lerp(1.35, 1, t));
+}
