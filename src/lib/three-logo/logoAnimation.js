@@ -120,3 +120,12 @@ export function getPhases(scrollProgress) {
     };
 }
 
+export function updateCamera(camera, startZ, endZ, phases) {
+    if (phases.phase7.raw > 0) {
+        camera.position.z = lerp(endZ, startZ, phases.phase7.eased);
+        return;
+    }
+
+    camera.position.z = lerp(startZ, endZ, phases.phase1.eased);
+}
+
