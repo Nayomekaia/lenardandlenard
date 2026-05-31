@@ -213,6 +213,25 @@ function applyPhase2(item, t) {
     mesh.position.z = lerp(0, state.z, t);
 
     applySeparatorZ(item);
+
+    mesh.rotation.x = lerp(0, state.rotX, t);
+    mesh.rotation.y = lerp(0, state.rotY, t);
+    mesh.rotation.z = lerp(0, state.rotZ, t);
+
+    const perspectiveScale = THREE.MathUtils.mapLinear(
+        mesh.position.z,
+        -state.depth,
+        state.depth,
+        0.88,
+        1.28,
+    );
+
+    applyScale(item, perspectiveScale);
+}
+
+function applyPhase3(item, t) {
+    if (!item.role.isActive) return;
+
     const fallDuration = 0.28;
     const fallPower = 3.4;
     const bounceStrength = 0.14;
