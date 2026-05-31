@@ -36,3 +36,7 @@ export function createLogoLights(scene) {
         createDirectionalLight("#B49A86", 0.22, [0, -2, -6]),
     ];
 
+    phaseLights.phaseColorLight.position.set(7, 5, 7);
+    phaseLights.phaseColorFillLight.position.set(0, 2, 8);
+    phaseLights.phaseColorGlowLight.position.set(0, 1.5, 9);
+
