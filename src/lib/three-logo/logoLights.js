@@ -44,3 +44,6 @@ export function createLogoLights(scene) {
         scene.add(light);
     });
 
+    return phaseLights;
+}
+
