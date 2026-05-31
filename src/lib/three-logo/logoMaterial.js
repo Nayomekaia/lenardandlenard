@@ -59,3 +59,14 @@ function createFineGrainTexture(size = 1024) {
     }
 
     ctx.putImageData(imageData, 0, 0);
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.repeat.set(65, 65);
+    texture.colorSpace = THREE.NoColorSpace;
+    texture.needsUpdate = true;
+
+    return texture;
+}
+
