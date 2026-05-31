@@ -5,3 +5,4 @@ export function createLogoMaterial() {
     const reflectionTexture = createChromeReflectionTexture();
 
     const logoMaterial = new THREE.MeshPhysicalMaterial({
+        color: new THREE.Color("#bcbee0"),
