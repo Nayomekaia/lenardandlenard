@@ -29,3 +29,8 @@
     }
 </style>
 
+<script>
+    import LogoObject from "$lib/three-logo/LogoObject.svelte";
+</script>
+
+<LogoObject />
