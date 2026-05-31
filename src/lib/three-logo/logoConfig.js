@@ -146,3 +146,61 @@ export const PHASE_4_END_LAYOUT = {
     },
 };
 
+export const PHASE_5_FINAL_LAYOUT = {
+    leftL: {
+        x: -1.4,
+        y: -0.65,
+        z: 0,
+        rotX: 0,
+        rotY: 0,
+        rotZ: 1.58,
+    },
+
+    center: {
+        x: 1.5,
+        y: -1.15,
+        z: 0,
+        rotX: 0,
+        rotY: 0,
+        rotZ: Math.PI / 2,
+    },
+
+    rightL: {
+        x: 0,
+        y: 0.2,
+        z: 0,
+        rotX: 0,
+        rotY: 0,
+        rotZ: 1.585,
+    },
+};
+
+export const PHASE_6_FINAL_LAYOUT = {
+    leftL: {
+        x: -2,
+        y: 0,
+        z: 0,
+        rotX: 0,
+        rotY: 0,
+        rotZ: 0,
+    },
+
+    center: {
+        x: 0,
+        y: 0,
+        z: 0,
+        rotX: 0,
+        rotY: 0,
+        rotZ: 0,
+    },
+
+    rightL: {
+        x: 2,
+        y: 0,
+        z: 0,
+        rotX: 0,
+        rotY: 0,
+        rotZ: 0,
+    },
+};
+
