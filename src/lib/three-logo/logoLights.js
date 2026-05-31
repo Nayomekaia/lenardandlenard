@@ -48,3 +48,9 @@ export function createLogoLights(scene) {
 }
 
 export function updatePhaseLights(lights, scrollProgress) {
+    const backgroundProgress = clamp(
+        scrollProgress / TIMELINE.phase7End,
+        0,
+        1,
+    );
+
