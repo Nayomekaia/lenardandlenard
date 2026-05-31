@@ -70,3 +70,10 @@ function createFineGrainTexture(size = 1024) {
     return texture;
 }
 
+function createChromeReflectionTexture(size = 2048) {
+    const canvas = document.createElement("canvas");
+    canvas.width = size;
+    canvas.height = size / 2;
+
+    const ctx = canvas.getContext("2d");
+    const gradient = ctx.createLinearGradient(0, 0, size, 0);
