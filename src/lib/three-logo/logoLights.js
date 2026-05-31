@@ -40,3 +40,7 @@ export function createLogoLights(scene) {
     phaseLights.phaseColorFillLight.position.set(0, 2, 8);
     phaseLights.phaseColorGlowLight.position.set(0, 1.5, 9);
 
+    [...baseLights, ...Object.values(phaseLights)].forEach((light) => {
+        scene.add(light);
+    });
+
