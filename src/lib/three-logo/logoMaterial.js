@@ -77,3 +77,23 @@ function createChromeReflectionTexture(size = 2048) {
 
     const ctx = canvas.getContext("2d");
     const gradient = ctx.createLinearGradient(0, 0, size, 0);
+
+    [
+        [0.0, "#080808"],
+        [0.12, "#151515"],
+        [0.14, "#d9dee0"],
+        [0.22, "#f2f4f5"],
+        [0.24, "#202020"],
+        [0.42, "#101010"],
+        [0.45, "#c5cbd0"],
+        [0.56, "#eef1f2"],
+        [0.58, "#121212"],
+        [0.78, "#080808"],
+        [0.82, "#b9c0c4"],
+        [1.0, "#101010"],
+    ].forEach(([stop, color]) => {
+        gradient.addColorStop(stop, color);
+    });
+
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, size, size / 2);
