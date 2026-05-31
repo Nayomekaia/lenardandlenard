@@ -56,3 +56,7 @@ export function updatePhaseLights(lights, scrollProgress) {
 
     const phaseColor = getGradientPhaseColor(backgroundProgress);
 
+    lights.phaseColorLight.color.copy(phaseColor);
+    lights.phaseColorFillLight.color.copy(phaseColor);
+    lights.phaseColorGlowLight.color.copy(phaseColor);
+
