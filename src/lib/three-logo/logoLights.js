@@ -11,3 +11,9 @@ function normalize(value, start, end) {
 }
 
 export function createLogoLights(scene) {
+    const phaseLights = {
+        phaseColorLight: new THREE.DirectionalLight("#B49A86", 0.18),
+        phaseColorFillLight: new THREE.DirectionalLight("#B49A86", 0.12),
+        phaseColorGlowLight: new THREE.PointLight("#B49A86", 0.2, 60),
+    };
+
