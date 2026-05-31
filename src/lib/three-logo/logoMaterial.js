@@ -97,3 +97,13 @@ function createChromeReflectionTexture(size = 2048) {
 
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, size, size / 2);
+
+    for (let i = 0; i < 80; i++) {
+        const x = Math.random() * size;
+        const width = 8 + Math.random() * 90;
+        const alpha = 0.018 + Math.random() * 0.055;
+        const color = Math.random() > 0.5 ? "238,241,242" : "10,10,10";
+
+        ctx.fillStyle = `rgba(${color},${alpha})`;
+        ctx.fillRect(x, 0, width, size / 2);
+    }
