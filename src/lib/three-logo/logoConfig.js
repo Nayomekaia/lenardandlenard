@@ -58,3 +58,62 @@ export const LETTERS = [
     { id: "L", file: "L1.glb", x: 12 },
 ];
 
+export const PHASE_3_LAYOUT = {
+    leftL: {
+        land: {
+            x: -0.65,
+            y: -3.05,
+            z: 0.12,
+            rotX: 0.05,
+            rotY: -0.08,
+            rotZ: -0.55,
+        },
+        top: {
+            x: -0.65,
+            y: 3.15,
+            z: 0.12,
+            rotX: 0.05,
+            rotY: -0.08,
+            rotZ: -0.55,
+        },
+    },
+
+    center: {
+        land: {
+            x: -0.95,
+            y: -3.35,
+            z: 0.05,
+            rotX: 0,
+            rotY: 0,
+            rotZ: Math.PI / 2,
+        },
+        top: {
+            x: -0.95,
+            y: 3.35,
+            z: 0.05,
+            rotX: 0,
+            rotY: 0,
+            rotZ: Math.PI / 2,
+        },
+    },
+
+    rightL: {
+        land: {
+            x: 0.95,
+            y: -3.25,
+            z: 0.1,
+            rotX: 0.02,
+            rotY: 0.05,
+            rotZ: 0,
+        },
+        top: {
+            x: 0.95,
+            y: 3.25,
+            z: 0.1,
+            rotX: 0.02,
+            rotY: 0.05,
+            rotZ: 0,
+        },
+    },
+};
+
