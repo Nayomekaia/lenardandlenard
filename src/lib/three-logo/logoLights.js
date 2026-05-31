@@ -96,3 +96,8 @@ function getGradientPhaseColor(progress) {
                 .lerp(nextColor.set(next.color), localT);
         }
     }
+
+    return currentColor.set(
+        BACKGROUND_PHASE_COLORS[BACKGROUND_PHASE_COLORS.length - 1].color,
+    );
+}
