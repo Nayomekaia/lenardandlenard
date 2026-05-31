@@ -24,3 +24,6 @@ export function createLogoMaterial() {
         emissive: new THREE.Color("#B49A86"),
         emissiveIntensity: 0.05,
 
+        transparent: true,
+        opacity: 1,
+    });
