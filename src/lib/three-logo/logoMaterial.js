@@ -107,3 +107,13 @@ function createChromeReflectionTexture(size = 2048) {
         ctx.fillStyle = `rgba(${color},${alpha})`;
         ctx.fillRect(x, 0, width, size / 2);
     }
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.mapping = THREE.EquirectangularReflectionMapping;
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+    texture.needsUpdate = true;
+
+    return texture;
+}
