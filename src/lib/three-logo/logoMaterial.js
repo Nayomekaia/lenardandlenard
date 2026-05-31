@@ -34,3 +34,13 @@ export function createLogoMaterial() {
         reflectionTexture,
     };
 }
+
+function createFineGrainTexture(size = 1024) {
+    const canvas = document.createElement("canvas");
+    canvas.width = size;
+    canvas.height = size;
+
+    const ctx = canvas.getContext("2d");
+    const imageData = ctx.createImageData(size, size);
+    const data = imageData.data;
+
