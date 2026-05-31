@@ -343,3 +343,21 @@ function applyPhase6(item, t) {
     applyState(item.mesh, state);
     applyScale(item, lerp(1.35, 1, t));
 }
+
+function applyPhase7(item, t) {
+    const { mesh, originalX, compactX, role } = item;
+
+    mesh.position.x = lerp(compactX, originalX, t);
+    mesh.position.y = 0;
+    mesh.position.z = role.isSeparator ? SEPARATOR_Z_OFFSET : 0;
+    mesh.rotation.set(0, 0, 0);
+
+    if (!role.isTopLetter && !role.isCenter) {
+        const speed = Math.abs(originalX) / 12;
+        const opacity = clamp(1 - (1 - t) / speed, 0, 1);
+
+        setOpacity(item, opacity);
+    }
+
+    applyScale(item);
+}
