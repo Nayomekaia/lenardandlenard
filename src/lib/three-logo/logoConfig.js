@@ -20,3 +20,13 @@ export const RENDER_ORDER = {
     separator: 10000,
 };
 
+export const TIMELINE = {
+    phase1End: 0.45,
+    phase2End: 1.25,
+    phase3End: 1.72,
+    phase4End: 2.15,
+    phase5End: 2.8,
+    phase6End: 3.05,
+    phase7End: 3.3,
+};
+
