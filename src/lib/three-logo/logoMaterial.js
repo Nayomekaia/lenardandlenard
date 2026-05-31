@@ -44,3 +44,18 @@ function createFineGrainTexture(size = 1024) {
     const imageData = ctx.createImageData(size, size);
     const data = imageData.data;
 
+    for (let i = 0; i < data.length; i += 4) {
+        const grain = Math.random();
+
+        const value =
+            grain > 0.5
+                ? 185 + Math.random() * 70
+                : 35 + Math.random() * 90;
+
+        data[i] = value;
+        data[i + 1] = value;
+        data[i + 2] = value;
+        data[i + 3] = 255;
+    }
+
+    ctx.putImageData(imageData, 0, 0);
