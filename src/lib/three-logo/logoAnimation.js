@@ -129,3 +129,36 @@ export function updateCamera(camera, startZ, endZ, phases) {
     camera.position.z = lerp(startZ, endZ, phases.phase1.eased);
 }
 
+export function applyAnimationPhases(letters, phases) {
+    letters.forEach((item) => {
+        resetTransform(item);
+
+        applyPhase1(item, phases.phase1.eased);
+        applyBaseRenderOrder(item);
+        applySeparatorZ(item);
+
+        if (phases.phase2.raw > 0) {
+            applyPhase2(item, phases.phase2.eased);
+        }
+
+        if (phases.phase3.raw > 0) {
+            applyPhase3(item, phases.phase3.raw);
+        }
+
+        if (phases.phase4.raw > 0) {
+            applyPhase4(item, phases.phase4.eased);
+        }
+
+        if (phases.phase5.raw > 0) {
+            applyPhase5(item, phases.phase5.eased);
+        }
+
+        if (phases.phase6.raw > 0) {
+            applyPhase6(item, phases.phase6.eased);
+        }
+
+        if (phases.phase7.raw > 0) {
+            applyPhase7(item, phases.phase7.eased);
+        }
+    });
+}
