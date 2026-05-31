@@ -47,3 +47,4 @@ export function createLogoLights(scene) {
     return phaseLights;
 }
 
+export function updatePhaseLights(lights, scrollProgress) {
