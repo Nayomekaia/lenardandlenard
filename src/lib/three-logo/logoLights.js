@@ -10,3 +10,4 @@ function normalize(value, start, end) {
     return clamp((value - start) / (end - start), 0, 1);
 }
 
+export function createLogoLights(scene) {
