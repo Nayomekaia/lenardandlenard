@@ -89,3 +89,10 @@ function getGradientPhaseColor(progress) {
         const next = BACKGROUND_PHASE_COLORS[i + 1];
 
         if (p >= current.stop && p <= next.stop) {
+            const localT = normalize(p, current.stop, next.stop);
+
+            return currentColor
+                .set(current.color)
+                .lerp(nextColor.set(next.color), localT);
+        }
+    }
