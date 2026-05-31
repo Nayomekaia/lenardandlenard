@@ -71,3 +71,11 @@ function createDirectionalLight(color, intensity, position) {
 
     return light;
 }
+
+function createPointLight(color, intensity, distance, position) {
+    const light = new THREE.PointLight(color, intensity, distance);
+    light.position.set(...position);
+
+    return light;
+}
+
