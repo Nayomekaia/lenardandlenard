@@ -60,3 +60,8 @@ export function updatePhaseLights(lights, scrollProgress) {
     lights.phaseColorFillLight.color.copy(phaseColor);
     lights.phaseColorGlowLight.color.copy(phaseColor);
 
+    lights.phaseColorLight.intensity = 0.18;
+    lights.phaseColorFillLight.intensity = 0.12;
+    lights.phaseColorGlowLight.intensity = 0.2;
+}
+
