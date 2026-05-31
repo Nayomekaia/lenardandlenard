@@ -262,3 +262,40 @@ function applyPhase4(item, t) {
     applyScale(item);
 }
 
+function applyPhase5(item, t) {
+    if (!item.role.isActive) return;
+
+    const key = item.role.key;
+    const start = PHASE_4_END_LAYOUT[key];
+    const end = PHASE_5_FINAL_LAYOUT[key];
+    const motion = PHASE_5_MOTION[key];
+
+    const state = lerpState(start, end, t);
+
+    const arc = Math.sin(t * Math.PI);
+    const arcSoft = arc * (1 - t);
+    const settle = Math.sin(t * Math.PI * 2) * 0.08 * (1 - t);
+
+    state.x += arc * motion.arcX;
+    state.y += arc * motion.arcY + settle * motion.settleY;
+    state.z += arc * motion.zLift;
+    state.rotY += arcSoft * motion.rotY;
+    state.rotZ += arcSoft * motion.rotZ;
+
+    if (item.role.isSeparator) {
+        state.z += SEPARATOR_Z_OFFSET;
+    }
+
+    setDepthMode(
+        item,
+        item.role.isSeparator
+            ? RENDER_ORDER.separator
+            : RENDER_ORDER.activeTop,
+        false,
+        false,
+    );
+
+    applyState(item.mesh, state);
+    applyScale(item, lerp(1, 1.35, t));
+}
+
