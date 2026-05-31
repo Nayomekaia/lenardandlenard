@@ -54,3 +54,5 @@ export function updatePhaseLights(lights, scrollProgress) {
         1,
     );
 
+    const phaseColor = getGradientPhaseColor(backgroundProgress);
+
