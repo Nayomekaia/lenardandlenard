@@ -21,3 +21,7 @@ export function createLogoLights(scene) {
         new THREE.AmbientLight("#B49A86", 0.62),
         new THREE.HemisphereLight(0xe8eef7, 0x927c6f, 0.82),
 
+        createDirectionalLight("#B49A86", 0.5, [0, 2, 11]),
+        createDirectionalLight("#bcbee0", 0.52, [-6, 6, 8]),
+        createDirectionalLight("#cfd1f5", 0.52, [6, 6, 8]),
+
