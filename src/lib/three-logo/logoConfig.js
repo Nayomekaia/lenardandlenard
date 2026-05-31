@@ -233,3 +233,12 @@ export const PHASE_5_MOTION = {
     },
 };
 
+export const BACKGROUND_PHASE_COLORS = [
+    { stop: 0.0, color: "#f2eeee" },
+    { stop: 0.07, color: "#d8d8d8" },
+    { stop: 0.27, color: "#6f4f3d" },
+    { stop: 0.49, color: "#777cae" },
+    { stop: 0.73, color: "#30345f" },
+    { stop: 0.87, color: "#7580c8" },
+    { stop: 1.0, color: "#e8e8f0" },
+];
