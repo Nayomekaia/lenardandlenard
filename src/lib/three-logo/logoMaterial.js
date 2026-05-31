@@ -27,3 +27,10 @@ export function createLogoMaterial() {
         transparent: true,
         opacity: 1,
     });
+
+    return {
+        logoMaterial,
+        grainTexture,
+        reflectionTexture,
+    };
+}
