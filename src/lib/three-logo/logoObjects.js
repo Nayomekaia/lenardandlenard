@@ -93,6 +93,20 @@ export function applySeparatorZ(item) {
     }
 }
 
+export function applyBaseRenderOrder(item) {
+    if (item.role.isSeparator) {
+        setDepthMode(item, RENDER_ORDER.separator, false, false);
+        return;
+    }
+
+    if (item.role.isTopLetter) {
+        setDepthMode(item, RENDER_ORDER.topLetter, false, false);
+        return;
+    }
+
+    setDepthMode(item, RENDER_ORDER.normal, true, true);
+}
+
 export function disposeMaterial(material) {
     if (Array.isArray(material)) {
         material.forEach((item) => item.dispose());
