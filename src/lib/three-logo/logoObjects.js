@@ -39,3 +39,18 @@ export function createLetterItem(mesh, data, baseMaterial) {
         childMeshes.push(child);
     });
 
+    const item = {
+        mesh,
+        childMeshes,
+        baseScale,
+        thickness,
+        originalX: data.x,
+        compactX: getCompactX(data.x),
+        role: getRole(data.x),
+    };
+
+    applyScale(item);
+
+    return item;
+}
+
