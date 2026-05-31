@@ -49,3 +49,74 @@ function applyState(mesh, state) {
     mesh.rotation.set(state.rotX, state.rotY, state.rotZ);
 }
 
+export function getPhases(scrollProgress) {
+    const phase1 = normalize(scrollProgress, 0, TIMELINE.phase1End);
+
+    const phase2 = normalize(
+        scrollProgress,
+        TIMELINE.phase1End,
+        TIMELINE.phase2End,
+    );
+
+    const phase3 = normalize(
+        scrollProgress,
+        TIMELINE.phase2End,
+        TIMELINE.phase3End,
+    );
+
+    const phase4 = normalize(
+        scrollProgress,
+        TIMELINE.phase3End,
+        TIMELINE.phase4End,
+    );
+
+    const phase5 = normalize(
+        scrollProgress,
+        TIMELINE.phase4End,
+        TIMELINE.phase5End,
+    );
+
+    const phase6 = normalize(
+        scrollProgress,
+        TIMELINE.phase5End,
+        TIMELINE.phase6End,
+    );
+
+    const phase7 = normalize(
+        scrollProgress,
+        TIMELINE.phase6End,
+        TIMELINE.phase7End,
+    );
+
+    return {
+        phase1: {
+            raw: phase1,
+            eased: easeOutCubic(phase1),
+        },
+        phase2: {
+            raw: phase2,
+            eased: easeOutCubic(phase2),
+        },
+        phase3: {
+            raw: phase3,
+            eased: phase3,
+        },
+        phase4: {
+            raw: phase4,
+            eased: easeOutQuart(phase4),
+        },
+        phase5: {
+            raw: phase5,
+            eased: easeOutQuart(phase5),
+        },
+        phase6: {
+            raw: phase6,
+            eased: easeOutCubic(phase6),
+        },
+        phase7: {
+            raw: phase7,
+            eased: easeOutCubic(phase7),
+        },
+    };
+}
+
