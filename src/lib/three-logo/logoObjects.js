@@ -70,3 +70,13 @@ export function setOpacity(item, opacity) {
     });
 }
 
+export function setDepthMode(item, renderOrder, depthTest, depthWrite) {
+    item.mesh.renderOrder = renderOrder;
+
+    item.childMeshes.forEach((child) => {
+        child.renderOrder = renderOrder;
+        child.material.depthTest = depthTest;
+        child.material.depthWrite = depthWrite;
+    });
+}
+
