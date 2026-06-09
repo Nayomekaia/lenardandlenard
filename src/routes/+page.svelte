@@ -19,12 +19,12 @@
     :global(body) {
         background: linear-gradient(
             180deg,
-            #080303 0%,
-            #1e1e1e 7%,
-            #B49A86 27%,
+            #070707 0%,
+            #4e5076 3%,
+            #B49A86 10%,
             #bcbee0 49%,
-            #4e5076 73%,
-            #191b3f 87%,
+            #B49A86 73%,
+             #4e5076 87%,
             #000000 100%
         ); 
         background-repeat: no-repeat;
